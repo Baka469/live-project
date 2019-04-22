@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,7 +32,7 @@ namespace 欢乐大抽奖
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if(textBox1.Text == String.Empty)
+            if (textBox1.Text == String.Empty)
             {
                 label7.Visible = true;
             }
@@ -51,7 +52,7 @@ namespace 欢乐大抽奖
             {
                 label29.Visible = false;
             }
-            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked )
+            if (!radioButton1.Checked && !radioButton2.Checked && !radioButton3.Checked)
             {
                 label23.Visible = true;
             }
@@ -75,11 +76,52 @@ namespace 欢乐大抽奖
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(label7.Visible == false && label9.Visible == false && label23.Visible == false && label25.Visible == false && label29.Visible == false)
+            if (label7.Visible == false && label9.Visible == false && label23.Visible == false && label25.Visible == false && label29.Visible == false)
             {
-                Form f1 = new Form2();
+                string awardWord = textBox1.Text;//抽奖关键词
+                string bDate = string.Format("{0:D4}-{1:D2}-{2:D2}", comboBox1.Text, comboBox2.Text, comboBox3.Text);//抽奖发言开始时段,
+                string bTime = string.Format("{0:D2}:{1:D2}:{2:D2},", comboBox10.Text, comboBox11.Text, "00");//UI类传进来的开始时间和日期
+                string eDate = string.Format("{0:D4}-{1:D2}-{2:D2}", comboBox6.Text, comboBox5.Text, comboBox4.Text);
+                string eTime = string.Format("{0:D2}:{1:D2}:{2:D2}", comboBox8.Text, comboBox12.Text, "00"); ;//UI类传进来的结束时间和日期
+
+                Dictionary<string, int> awardNameAndNumber = new Dictionary<string, int>();//奖品与人数字典 这里用奖品名做主键，所以奖品名不能重复
+                awardNameAndNumber.Add("一等奖:" + textBox7.Text, int.Parse(textBox10.Text));
+                awardNameAndNumber.Add("二等奖:" + textBox8.Text, int.Parse(textBox11.Text));
+                awardNameAndNumber.Add("三等奖:" + textBox9.Text, int.Parse(textBox12.Text));
+                int filterFlag = 0;//过滤规则标识符 初始化{0}不过滤 {1}过滤10天内未发言的 {2}过滤20天内未发言的
+                if (radioButton2.Checked)
+                {
+                    filterFlag = 1;
+                }
+                else if (radioButton3.Checked)
+                {
+                    filterFlag = 2;
+                }
+                else
+                {
+                    filterFlag = 0;
+                }
+                string filterWord = textBox5.Text;//过滤关键词
+
+                Dictionary<string, int> nameAndWeight = Filter.filter(awardWord, filterFlag,filterWord , bDate, bTime, eDate, eTime);//过滤传进来
+                Dictionary<string, ArrayList> winningInfo = PrizeDraw.prizeDrawAll(awardNameAndNumber, nameAndWeight);
+
+                Form2 resultForm = new Form2();
+
+                foreach (var award in winningInfo)
+                {
+                    //追加
+                    resultForm.RichTextBoxValue = award.Key + "\n";
+                    ArrayList winners = award.Value;
+                    foreach (var winner in winners)
+                    {
+                        resultForm.RichTextBoxValue = winner + "、";
+                    }
+                    resultForm.RichTextBoxValue = "\n";
+                }
+
                 this.Hide();
-                f1.ShowDialog();
+                resultForm.ShowDialog();
                 this.Dispose();
             }
             else
@@ -208,81 +250,5 @@ namespace 欢乐大抽奖
                 label9.Visible = false;
             }
         }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox12_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox11_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
     }
-
-    /*public class Setmessage
-    {
-        public static string draw_keyword;
-
-    }*/
 }

@@ -20,3 +20,14 @@ C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸�
 C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.exe
 C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.pdb
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\bin\Debug\欢乐大抽奖.exe.config
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\bin\Debug\欢乐大抽奖.exe
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\bin\Debug\欢乐大抽奖.pdb
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csprojAssemblyReference.cache
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form1.resources
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form2.resources
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.Properties.Resources.resources
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.GenerateResource.cache
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.CoreCompileInputs.cache
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.exe
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.pdb
