@@ -1,0 +1,11 @@
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\bin\Debug\欢乐大抽奖.exe.config
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\bin\Debug\欢乐大抽奖.exe
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\bin\Debug\欢乐大抽奖.pdb
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\幸运大抽奖.csprojAssemblyReference.cache
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form1.resources
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.Properties.Resources.resources
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.GenerateResource.cache
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.CoreCompileInputs.cache
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.exe
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.pdb
+D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form2.resources
