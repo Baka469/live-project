@@ -35,14 +35,14 @@ namespace 欢乐大抽奖
 
 
 
-        public Dictionary<string, int> filter(string t, int filterFlag, string awardWord, string bDate, string bTime, string eDate, string eTime)
+        public static Dictionary<string, int> filter(string t, int filterFlag, string filterWord, string bDate, string bTime, string eDate, string eTime)
         {
             //string t = "#我要换组#、#我要红包#、#我爱软工实践#";
             ListDictionary lDic = new ListDictionary();
             List<QQxiaoxi> qqList = new List<QQxiaoxi>();
             QQxiaoxi xiaoxi = new QQxiaoxi();
 
-            StreamReader file = new StreamReader(@"C: \Users\Lenovo\source\repos\ConsoleApp3\ConsoleApp3\QQrecord-2022.txt");
+            StreamReader file = new StreamReader(@"..\..\..\QQrecord-2022.txt");
             string line;
             bool panduan(string s, string m)
             {
@@ -172,30 +172,21 @@ namespace 欢乐大抽奖
                     }
                 }
             }
+
             List<string> delList = new List<string>();
-            if (filterFlag != 0)
+
+            foreach (string key in lDic.list.Keys)
             {
-                int limit;
-                if (filterFlag == 1)
-                    limit = 4;
-                else
-                    limit = 8;
-                
-
-                foreach (string key in lDic.list.Keys)
+                if (lDic.list[key] < 4)
                 {
-                    if (lDic.list[key] < limit)
-                    {
-                        delList.Add(key);
-                    }
-                }
-
-                foreach (string key in delList)
-                {
-                    lDic.list.Remove(key);
+                    delList.Add(key);
                 }
             }
-            
+
+            foreach (string key in delList)
+            {
+                lDic.list.Remove(key);
+            }
 
             //删除助教QQ
             List<string> zhuJiao = new List<string>();
@@ -204,26 +195,9 @@ namespace 欢乐大抽奖
                 lDic.list.Remove(zhuJiaoNumber);
             }
 
-            //设置权重
-            foreach (string key in lDic.list.Keys)
-            {
-                if (lDic.list[key] > 5)
-                {
-                    lDic.list[key] = 2;
-                }
-                else if (lDic.list[key] > 10)
-                {
-                    lDic.list[key] = 3;
-                }
-                else
-                {
-                    lDic.list[key] = 1;
-                }
-            }
-
             file.Close();
             return lDic.list;
         }
     }
-    
+
 }

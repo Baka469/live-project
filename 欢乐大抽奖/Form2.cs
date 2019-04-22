@@ -16,10 +16,6 @@ namespace 欢乐大抽奖
         {
             InitializeComponent();
         }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+        public string RichTextBoxValue { get { return richTextBox1.Text; } set { richTextBox1.AppendText(value); } }
     }
 }
