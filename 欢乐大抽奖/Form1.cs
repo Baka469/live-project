@@ -43,7 +43,11 @@ namespace 欢乐大抽奖
 
         private void textBox5_Click(object sender, EventArgs e)
         {
-            if (textBox7.Text == String.Empty || textBox10.Text == String.Empty)
+            if (textBox7.Text == String.Empty || textBox8.Text == String.Empty || textBox9.Text == String.Empty)
+            {
+                label29.Visible = true;
+            }
+            else if (!isNumberic(textBox10.Text)|| !isNumberic(textBox11.Text) || !isNumberic(textBox12.Text) )
             {
                 label29.Visible = true;
             }
