@@ -9,3 +9,14 @@ D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐
 D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.exe
 D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.pdb
 D:\学习文件\新学期课件\软件工程\团战实训\欢乐大抽奖\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form2.resources
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\bin\Debug\欢乐大抽奖.exe.config
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\bin\Debug\欢乐大抽奖.exe
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\bin\Debug\欢乐大抽奖.pdb
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csprojAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form1.resources
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form2.resources
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.Properties.Resources.resources
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.GenerateResource.cache
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.exe
+C:\Users\Administrator\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.pdb

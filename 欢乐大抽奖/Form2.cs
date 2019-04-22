@@ -19,7 +19,7 @@ namespace 欢乐大抽奖
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

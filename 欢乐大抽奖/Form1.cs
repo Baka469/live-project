@@ -29,54 +29,6 @@ namespace 欢乐大抽奖
                 return false;
         }
 
-        private void textBox8_Click(object sender, EventArgs e)
-        {
-            if (textBox7.Text == String.Empty || textBox10.Text == String.Empty)
-            {
-                textBox8.Enabled = false;
-                textBox11.Enabled = false;
-                textBox9.Enabled = false;
-                textBox12.Enabled = false;
-            }
-            else
-            {
-                textBox8.Enabled = true;
-                textBox11.Enabled = true;
-                textBox9.Enabled = true;
-                textBox12.Enabled = true;
-            }
-        }
-
-        private void textBox11_Click(object sender, EventArgs e)
-        {
-            if (textBox7.Text == String.Empty || textBox10.Text == String.Empty)
-            {
-                textBox8.Enabled = false;
-                textBox11.Enabled = false;
-                textBox9.Enabled = false;
-                textBox12.Enabled = false;
-            }
-            else
-            {
-                textBox8.Enabled = true;
-                textBox11.Enabled = true;
-                textBox9.Enabled = true;
-                textBox12.Enabled = true;
-            }
-        }
-
-        private void textBox9_Click(object sender, EventArgs e)
-        {
-            if (textBox7.Text == String.Empty || textBox10.Text == String.Empty || textBox8.Text == String.Empty || textBox11.Text == String.Empty)
-            {
-                textBox9.Enabled = false;
-            }
-            else
-            {
-                textBox9.Enabled = true;
-            }
-        }
-
         private void textBox1_Leave(object sender, EventArgs e)
         {
             if(textBox1.Text == String.Empty)
@@ -86,18 +38,6 @@ namespace 欢乐大抽奖
             else
             {
                 label7.Visible = false;
-            }
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            if (textBox2.Text == String.Empty || !isNumberic(textBox2.Text))
-            {
-                label8.Visible = true;
-            }
-            else
-            {
-                label8.Visible = false;
             }
         }
 
@@ -135,7 +75,7 @@ namespace 欢乐大抽奖
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(label7.Visible == false && label8.Visible == false && label9.Visible == false && label23.Visible == false && label25.Visible == false && label29.Visible == false)
+            if(label7.Visible == false && label9.Visible == false && label23.Visible == false && label25.Visible == false && label29.Visible == false)
             {
                 Form f1 = new Form2();
                 this.Hide();
@@ -269,5 +209,80 @@ namespace 欢乐大抽奖
             }
         }
 
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox11_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
+    /*public class Setmessage
+    {
+        public static string draw_keyword;
+
+    }*/
 }
