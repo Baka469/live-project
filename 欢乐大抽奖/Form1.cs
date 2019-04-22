@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -79,13 +80,29 @@ namespace 欢乐大抽奖
             {
                 Form f1 = new Form2();
                 this.Hide();
+
                 f1.ShowDialog();
                 this.Dispose();
+                string awardWord;//抽奖关键词
+                string beginDateTime;//抽奖发言开始时段
+                string endDateTime;// 抽奖发言结束时段
+                Dictionary<string, int> awardNameAndNumber;//奖品与人数字典
+                int filterFlag;//过滤规则标识符
+                string filterWord;//过滤关键词
+                                  //添加函数运行
+                Dictionary<string, int> nameAndWeight = Filter.filter(filterWord, filterFlag, awardWord, bDate, bTime, eDate, eTime);//过滤传进来
+                Dictionary<string, ArrayList> winningInfo = PrizeDraw.prizeDrawAll(awards, nameAndWeight);
             }
             else
             {
                 MessageBox.Show("没有正确填写信息，请返回重写");
             }
+            
+            
+
+
+
+
         }
 
         private void comboBox1_Leave(object sender, EventArgs e)
@@ -275,6 +292,11 @@ namespace 欢乐大抽奖
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
