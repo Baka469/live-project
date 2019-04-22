@@ -99,7 +99,6 @@
             this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "抽奖人数";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -109,7 +108,6 @@
             this.label3.Size = new System.Drawing.Size(97, 15);
             this.label3.TabIndex = 3;
             this.label3.Text = "抽奖发言时段";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -126,8 +124,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 25);
             this.textBox1.TabIndex = 5;
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
             // textBox2
@@ -136,8 +132,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(112, 25);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
             // label10
@@ -173,7 +167,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(100, 25);
             this.textBox7.TabIndex = 19;
-            this.textBox7.Click += new System.EventHandler(this.textBox7_Click);
             // 
             // textBox8
             // 
@@ -190,7 +183,6 @@
             this.textBox9.Size = new System.Drawing.Size(100, 25);
             this.textBox9.TabIndex = 21;
             this.textBox9.Click += new System.EventHandler(this.textBox9_Click);
-            this.textBox9.ClientSizeChanged += new System.EventHandler(this.textBox9_ClientSizeChanged);
             // 
             // label13
             // 
@@ -216,7 +208,6 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 25);
             this.textBox10.TabIndex = 24;
-            this.textBox10.Click += new System.EventHandler(this.textBox10_Click);
             // 
             // textBox11
             // 
@@ -232,7 +223,6 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(100, 25);
             this.textBox12.TabIndex = 26;
-            this.textBox12.Click += new System.EventHandler(this.textBox12_Click);
             // 
             // button1
             // 
@@ -346,7 +336,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(67, 23);
             this.comboBox1.TabIndex = 44;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.Leave += new System.EventHandler(this.comboBox1_Leave);
             // 
             // comboBox2
@@ -369,7 +358,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(67, 23);
             this.comboBox2.TabIndex = 45;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             this.comboBox2.Leave += new System.EventHandler(this.comboBox2_Leave);
             // 
             // comboBox3
@@ -448,7 +436,6 @@
             this.label18.Size = new System.Drawing.Size(22, 15);
             this.label18.TabIndex = 50;
             this.label18.Text = "日";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label19
             // 
@@ -644,7 +631,6 @@
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(68, 23);
             this.comboBox10.TabIndex = 57;
-            this.comboBox10.SelectedIndexChanged += new System.EventHandler(this.comboBox10_SelectedIndexChanged);
             this.comboBox10.Leave += new System.EventHandler(this.comboBox10_Leave);
             // 
             // label26
@@ -923,8 +909,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "幸运大抽奖";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Form1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

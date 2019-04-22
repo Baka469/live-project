@@ -29,62 +29,6 @@ namespace 欢乐大抽奖
                 return false;
         }
 
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox7_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox10_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void textBox8_Click(object sender, EventArgs e)
         {
             if (textBox7.Text == String.Empty || textBox10.Text == String.Empty)
@@ -131,41 +75,6 @@ namespace 欢乐大抽奖
             {
                 textBox9.Enabled = true;
             }
-        }
-
-        private void textBox12_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
@@ -239,16 +148,6 @@ namespace 欢乐大抽奖
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox1_Leave(object sender, EventArgs e)
         {
             if (comboBox1.Text == "" || !isNumberic(comboBox1.Text))
@@ -285,10 +184,6 @@ namespace 欢乐大抽奖
             }
         }
 
-        private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox10_Leave(object sender, EventArgs e)
         {
@@ -374,9 +269,5 @@ namespace 欢乐大抽奖
             }
         }
 
-        private void textBox9_ClientSizeChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
