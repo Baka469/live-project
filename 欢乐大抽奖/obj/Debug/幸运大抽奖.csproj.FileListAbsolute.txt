@@ -31,3 +31,4 @@ C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽�
 C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\幸运大抽奖.csproj.CoreCompileInputs.cache
 C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.exe
 C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.pdb
+C:\Users\wuhe\Source\Repos\live-project\欢乐大抽奖\obj\Debug\欢乐大抽奖.Form3.resources
