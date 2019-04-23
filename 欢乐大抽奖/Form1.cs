@@ -86,8 +86,10 @@ namespace 欢乐大抽奖
 
                 Dictionary<string, int> awardNameAndNumber = new Dictionary<string, int>();//奖品与人数字典 这里用奖品名做主键，所以奖品名不能重复
                 awardNameAndNumber.Add("一等奖:" + textBox7.Text, int.Parse(textBox10.Text));
-                awardNameAndNumber.Add("二等奖:" + textBox8.Text, int.Parse(textBox11.Text));
-                awardNameAndNumber.Add("三等奖:" + textBox9.Text, int.Parse(textBox12.Text));
+                if(!string.IsNullOrEmpty(textBox11.Text) && !string.IsNullOrEmpty(textBox8.Text))
+                    awardNameAndNumber.Add("二等奖:" + textBox8.Text, int.Parse(textBox11.Text));
+                if (!string.IsNullOrEmpty(textBox12.Text) && !string.IsNullOrEmpty(textBox9.Text))
+                    awardNameAndNumber.Add("三等奖:" + textBox9.Text, int.Parse(textBox12.Text));
                 int filterFlag = 0;//过滤规则标识符 初始化{0}不过滤 {1}过滤10天内未发言的 {2}过滤20天内未发言的
                 if (radioButton2.Checked)
                 {
@@ -249,6 +251,11 @@ namespace 欢乐大抽奖
             {
                 label9.Visible = false;
             }
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -40,25 +40,28 @@ namespace 欢乐大抽奖
             //string t = "#我要换组#、#我要红包#、#我爱软工实践#";
             ListDictionary lDic = new ListDictionary();
             List<QQxiaoxi> qqList = new List<QQxiaoxi>();
-            QQxiaoxi xiaoxi = new QQxiaoxi();
+           
 
-            StreamReader file = new StreamReader(@"..\..\..\QQrecord-2022.txt");
+            StreamReader file = new StreamReader(@"QQrecord-2022.txt");
             string line;
             bool panduan(string s, string m)
             {
-                Match matches = Regex.Match(s, m);
+                //Match matches = Regex.Match(s, m);
 
-                return matches.Success;
+                return s.Contains(m);
             }
-
+            QQxiaoxi xiaoxi=new QQxiaoxi();
             while ((line = file.ReadLine()) != null)
             {
                 Regex reg = new Regex(@"\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2}\s.*");
                 Match match = reg.Match(line);
                 string value = match.Groups[0].Value;
+                
                 if (value != "")
                 {
+                    xiaoxi = new QQxiaoxi();
                     qqList.Add(xiaoxi);
+                    
                     MatchCollection matches1 = Regex.Matches(line, @"\d{4}-\d{2}-\d{2}");
                     MatchCollection matches2 = Regex.Matches(line, @"\d{2}:\d{2}:\d{2}");
 
@@ -116,22 +119,21 @@ namespace 欢乐大抽奖
             //判断时间是否有超过规定日期
             //string bDate = "2020-01-01", bTime = "18:21:02";//UI类传进来的开始时间和日期
             //string eDate = "2020-08-08", eTime = "21:00:00";//UI类传进来的结束时间和日期
-            DateTime bDT1 = DateTime.Parse(bDate);
-            DateTime eDT1 = DateTime.Parse(eDate);
-            DateTime bDT2 = Convert.ToDateTime(bTime);
-            DateTime eDT2 = Convert.ToDateTime(eTime);
+            DateTime bDT1 = DateTime.Parse(bDate +" "+ bTime);
+            DateTime eDT1 = DateTime.Parse(eDate + " " + eTime);
             List<string> addList = new List<string>();
             foreach (var qqNumList in qqList)
             {
                 if (qqNumList.flag == true)
                 {
-                    DateTime sDate = DateTime.Parse(qqNumList.date);
-                    DateTime sTime = Convert.ToDateTime(qqNumList.time);
+                    DateTime sDate = DateTime.Parse(qqNumList.date + " " + qqNumList.time);
+                   
 
-                    if (DateTime.Compare(bDT1, sDate) < 0 && DateTime.Compare(eDT1, sDate) > 0)
+                    if (!(DateTime.Compare(bDT1, sDate) > 0 || DateTime.Compare(eDT1, sDate) < 0))
                     {
                         addList.Add(qqNumList.qqhaoma);
                     }
+                    /*
                     else if (DateTime.Compare(bDT1, sDate) == 0 || DateTime.Compare(eDT1, sDate) == 0)
                     {
                         if (DateTime.Compare(bDT1, sDate) == 0)
@@ -146,6 +148,7 @@ namespace 欢乐大抽奖
                             }
                         }
                     }
+                    */
                 }
             }
 
@@ -158,23 +161,27 @@ namespace 欢乐大抽奖
                 }
                 else
                 {
-                    if (lDic.list.Keys.Contains(qqNumList))
+                    if(qqNumList!=null)
                     {
-                        string temp = qqNumList;
-                        int num = lDic.list[temp];
-                        num++;
-                        lDic.list.Remove(qqNumList);
-                        lDic.list.Add(qqNumList, num);
+                        if (lDic.list.Keys.Contains(qqNumList))
+                        {
+                            string temp = qqNumList;
+                            int num = lDic.list[temp];
+                            num++;
+                            lDic.list.Remove(qqNumList);
+                            lDic.list.Add(qqNumList, num);
+                        }
+                        else
+                        {
+                            lDic.list.Add(qqNumList, 1);
+                        }
                     }
-                    else
-                    {
-                        lDic.list.Add(qqNumList, 1);
-                    }
+                    
                 }
             }
 
             List<string> delList = new List<string>();
-
+            
             foreach (string key in lDic.list.Keys)
             {
                 if (lDic.list[key] < 4)
@@ -187,14 +194,14 @@ namespace 欢乐大抽奖
             {
                 lDic.list.Remove(key);
             }
-
+            
             //删除助教QQ
             List<string> zhuJiao = new List<string>();
             foreach (string zhuJiaoNumber in zhuJiao)
             {
                 lDic.list.Remove(zhuJiaoNumber);
             }
-
+            
             file.Close();
             return lDic.list;
         }
